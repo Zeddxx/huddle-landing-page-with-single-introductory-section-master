@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        position: fixed;
+        width: 100vw;
+        bottom: 0;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header id="top" class="container"><img src="./images/logo.svg" alt="Main Logo" /></header>
+    <main class="container">
+      <div class="img-div"><img src="./images/illustration-mockups.svg" alt="Mockuos"></div>
+      <div class="clm">
+        <div class="content-div">
+          <h1>Build The Community Your Fans Will Love</h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice, but
+            so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button class="register">Register</button>
+        </div>
+        <div class="social">
+          <span><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></span>
+          <span><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></span>
+          <span><i class="fa-brands fa-instagram" style="color:#ffffff;"></i></span>
+        </div>
+      </div>
+    </main>
+    <!-- Build The Community Your Fans Will Love
+
+  
+
+  Register -->
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://zeddxx.github.io/Landing-page/" title="To Landpage" target="_blank">Sahil Ahmed</a>.
+      </p>
+    </footer>
+
+    <script>
+      const cursorEl = document.querySelector('.cursor');
+      const registerBtn = document.querySelector('.register');
+
+      document.addEventListener('mousemove', (e) => {
+        cursorEl.style.left = e.clientX - 70  + 'px';
+        cursorEl.style.top = e.clientY - 70  + 'px';
+      })
+
+    </script>
+  </body>
+</html>

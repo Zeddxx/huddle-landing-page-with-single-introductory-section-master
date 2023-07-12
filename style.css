@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --ff-head: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+}
+body {
+  background: url("./images/bg-mobile.svg") no-repeat top var(--violet);
+  background-size: 100%;
+  font-family: var(--ff-body);
+}
+#top {
+  width: 100vw;
+  height: 20vh;
+  /* padding: 0 1rem; */
+  display: flex;
+  align-items: center;
+}
+#top img {
+  width: 8rem;
+}
+main {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* padding: 0 1.8rem; */
+  margin-bottom: 2rem;
+}
+.img-div {
+  /* min-height: 40%; */
+  height: inherit;
+  min-width: 100%;
+}
+.img-div > img {
+  width: 100%;
+  object-fit: contain;
+}
+.content-div {
+  max-width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+.content-div h1 {
+  font-family: var(--ff-head);
+  text-align: center;
+  line-height: 1.5;
+  font-size: 7vw;
+  color: #fff;
+  width: 100%;
+  font-weight: 600;
+}
+.content-div > p {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+}
+.content-div > .register {
+  padding: 1rem 0;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  width: 80%;
+  color: var(--violet);
+  box-shadow: 0 0 15px #333;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.register:hover{
+  color: #fff;
+  background: var(--soft-magenta);
+}
+.register::before{
+  content: '';
+  height: 30px;
+  width: 30px;
+  background: var(--violet);
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+.social {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.social > span {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.social > span > i {
+  font-size: 1rem;
+ transition: all .3s ease;
+}
+.social > span:hover{
+  border: 1px solid var(--soft-magenta);
+}
+.social > span:hover >i{
+  font-size: 1.2rem;
+  color: var(--soft-magenta) !important;
+}
+.cursor{
+  /* display: none; */
+  position: fixed;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: var(--soft-magenta);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+@media screen and (width >= 1200px){
+  body{
+    overflow-x: hidden;
+    background: url('./images/bg-desktop.svg') no-repeat center var(--violet);
+    background-size: cover;
+  }
+    main{
+        flex-direction: row;
+        min-height: 70vh;
+        width: 100vw;
+        margin: 0;
+    }
+    #top{
+      width: 100vw;
+        /* padding: 0 2rem; */
+    }
+    #top img{
+        width: 10vw;
+    }
+    .img-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+        min-width: 50%;
+    }
+    .clm{
+        display: flex;
+        align-items: self-start;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    .img-div > img{
+        max-width: 90%;
+        object-fit: cover;
+    }
+    .content-div {
+        align-items: self-start;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    .content-div h1{
+        text-align: start;
+        font-size: 3rem;
+    }
+    .content-div p{
+      width: 75%;
+        text-align: start;
+    }
+    .content-div > .register{
+      width: 40%;
+    }
+    .social{
+      height: inherit;
+      justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    /* .cursor{
+      display: flex;
+    } */
+}
